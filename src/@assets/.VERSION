@@ -1,0 +1,5 @@
+1.0.4::
+Correction de quelques bugs et mise à jour de certaines fonctions
+1.0.5::
+-[JS]*Ajoute de widgets et de fonctionnalité comme (toast,tl_alert et tlDatePicker)
+-[CSS]*Ajoute de style de widgets comme (toast,tl_alert et tlDatePicker)

@@ -1,5 +1,28 @@
-body {
+@import url("./@assets/tlBootstrap/boxicons/css/boxicons.min.css");
+* {
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent !important;
+}
+:root {
+  --primary-color: #019eff;
+  --alert-danger: rgb(246, 79, 100);
+}
+::-webkit-scrollbar {
+ width: 4px;
+ height: 4px;
+ background: transparent;
+}
+::-webkit-scrollbar-track {
+  width: 4px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +33,263 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+/* .rounded {
+  display: flex;
+} */
+.position-sticky {
+  position: sticky;
+}
+.position-fixed {
+  position: fixed;
+}
+.position-absolute {
+  position: absolute;
+}
+.position-relative {
+  position: relative;
+}
+.d-flex {
+  display: flex;
+}
+.d-none {
+  display: none;
+}
+.d-block {
+  display: block;
+}
+.d-inline-block {
+  display: inline-block;
+}
+.d-inline-flex {
+  display: inline-flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+.row,.md-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.col {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.col-1 {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+}
+.col-2 {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rounded{  
+  border-radius: 50%;
+
+}
+.ai-center {
+  align-items: center;
+}
+.ai-start {
+  align-items: start;
+}
+.ai-end {
+  align-items: end;
+}
+.jc-center {
+  justify-content: center;
+}
+.jc-start {
+  justify-content: start;
+}
+.jc-end {
+  justify-content: end;
+}
+.jc-between {
+  justify-content: space-between;
+}
+.jc-around {
+  justify-content: space-around;
+}
+.jc-evenly {
+  justify-content: space-evenly;
+}
+.w-100 {
+  width: 100%;
+}
+.gap-5 {
+  gap: 5px;
+}
+.gap-10 {
+  gap: 10px;
+}
+.gap-15 {
+  gap: 15px;
+}
+.gap-20 {
+  gap: 20px;
+}
+.gap-25 {
+  gap: 25px;
+}
+.gap-30 {
+  gap: 30px;
+}
+.color-white {
+  color: white;
+}
+.color-black {
+  color: black;
+}
+.color-grey {
+  color: grey;
+}
+.color-red {
+  color: red;
+}
+.color-blue {
+  color: blue;
+}
+.color-orange {
+  color: orange;
+}
+.color-orange-red {
+  color: orangered;
+}
+.color-green {
+  color: green;
+}
+.color-yellow {
+  color: yellow;
+}
+.primary-color {
+  color: var(--primary-color);
+}
+
+.primary-bg {
+  background-color: var(--primary-color);
+}
+.bg-white {
+  background-color: white;
+}
+.bg-black {
+  background-color: black;
+}
+.bg-grey {
+  background-color: grey;
+}
+.bg-red {
+  background-color: red;
+}
+.bg-blue {
+  background-color: blue;
+}
+.bg-orange {
+  background-color: orange;
+}
+.bg-orange-red {
+  background-color: orangered;
+}
+.bg-green {
+  background-color: green;
+}
+.bg-yellow {
+  background-color: yellow;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-scroll {
+  overflow: scroll;
+}
+.overflow-auto {
+  overflow: auto;
+}
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+.overflow-y-auto {
+  overflow-y: auto;
+}
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.ellipis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+}
+.no-wrap {
+  white-space: nowrap;
+  text-wrap: nowrap;
+}
+.ellipis-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: pre;
+  word-break: break-all;
+  text-wrap: wrap;
+  text-overflow: ellipsis;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.btn {
+  /* display: inline-block; */
+  cursor: pointer;
+  padding: 10px 20px;
+  /* color: white; */
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.show-on-mobile {
+  display:none !important;
 }

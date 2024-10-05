@@ -1,0 +1,174 @@
+
+.tl_ico {
+    color: var(--primary-color);
+    will-change: color;
+    transition: color .2s ease;
+}
+.inputer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;
+    background: transparent;
+    border-radius: 20px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+    padding-right: 15px;
+    transition: all ease .2s;
+}
+.inputer input {
+    border-radius: 20px;
+    padding: 13px 5px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: rgb(125, 149, 188);
+    font-size: 14px;
+    letter-spacing: 1px;
+    will-change: color;
+    transition: color ease .2s;
+}
+.inputer[valid="false"] .tl_ico {
+    color: var(--alert-danger) !important;
+}
+.inputer[valid="false"] input {
+    color: var(--alert-danger) !important;
+}
+.inputer input::placeholder {
+    color: rgb(125, 153, 240);
+}
+.inputer[valid="false"] input::placeholder {
+    color: var(--alert-danger);
+}
+.SButton {
+    background-color: var(--primary-color);
+    color: white;
+    width: 100%;
+    border-radius: 20px;
+    padding: 12px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.tl-checkbox {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+    padding: 6px 8px;
+    border-radius: 15px;
+}
+.tl-checkbox label {
+    font-size: 12px;
+    color: grey;
+    cursor: pointer;
+}
+.tl-checkbox input[type="checkbox"]{
+    display: none;
+}
+.tl-checkbox .box {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    outline: 2px solid var(--primary-color);
+    position: relative;
+}
+.tl-checkbox .box::before {
+    position: absolute;
+    inset: 2px;
+    content: "";
+    background: var(--primary-color);
+    border-radius: 50%;
+    opacity: 0;
+    will-change: opacity;
+    transition: opacity .2s ease-out;
+}
+.tl-checkbox input[type="checkbox"]:checked~.box::before{
+    opacity: 1;
+}
+
+svg {
+    cursor: pointer;
+}
+svg * {
+    pointer-events: none;
+}
+g g path, g ellipse {
+    transition: all .4s ease;
+}
+
+svg g .upperEye {
+    /* ry: 1; */
+    animation: papillesup 5s infinite linear;
+}
+svg g .lowerEye {
+    /* ry: 1; */
+    animation: papilleinf 5s infinite linear;
+}
+svg g .pupil {
+    /* ry: 1; */
+    animation: pupiler 5s infinite linear;
+}
+
+@keyframes pupiler {
+    0%,42%,48%,55% {
+        ry: 10;
+        cy: 50 /* Oeil ouvert */
+    
+    }
+    45% {
+        ry: 0;
+        cy: 58; /* Oeil se ferme */
+    }
+    70% {
+        cy: 40;
+        cx: 42;
+    }
+    85%,90% {
+        cy: 35;
+        cx: 55;
+    }
+}
+@keyframes papillesup {
+    0%,42%,48% {
+        d: path("M 10 39.5 Q 50 0 90 39.5"); /* Oeil ouvert */
+    }
+    45% {
+        d: path("M 10 39.5 Q 50 60 90 39.5"); /* Oeil se ferme */
+    }
+}
+@keyframes papilleinf {
+    0%,42%,48% {
+        d: path("M 10 39.5 Q 50 80 90 39.5"); /* Oeil ouvert */
+    }
+    45% {
+        d: path("M 10 39.5 Q 50 60 90 39.5"); /* Oeil se ferme */
+    }
+}
+
+/* Animation de fermeture */
+.closed * {
+    animation: none !important;
+}
+.closed .upperEye {
+    /* ry: 1; */
+    d: path("M 10 39.5 Q 50 60 90 39.5"); /* Oeil fermé */
+}
+.closed .lowerEye {
+    /* ry: 1; */
+    d: path("M 10 39.5 Q 50 60 90 39.5"); /* Oeil fermé */
+}
+.closed~.pupil {
+    animation: none !important;
+    ry: 0;
+    cy: 52;
+}
+
